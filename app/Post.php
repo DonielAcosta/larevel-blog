@@ -11,8 +11,9 @@ class Post extends Model
 
   protected $fillable = [
    'title',
-   'slug',
    'body',
+   'iframe',
+   'image',
    'user_id'
   ];
   /**

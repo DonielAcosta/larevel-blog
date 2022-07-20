@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     Artículos
-                    <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary float-end">Crear</a>
+                    <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>
                 </div>
 
                 <div class="card-body">

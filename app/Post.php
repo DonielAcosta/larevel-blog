@@ -4,11 +4,17 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-
+use App\User;
 class Post extends Model
 {
   use Sluggable;
 
+  protected $fillable = [
+   'title',
+   'slug',
+   'body',
+   'user_id'
+  ];
   /**
    * Return the sluggable configuration array for this model.
    *
@@ -22,5 +28,16 @@ class Post extends Model
               'onUpdate' => true
           ]
       ];
+  }
+
+  public function user(){
+    
+    return $this->belongsTo(User::class);
+  }
+
+  public function getGetExcerptAttribute(){
+    
+    return substr($this->body, 0, 140);
+    
   }
 }

@@ -42,7 +42,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
       //salvar
-      dd($request->all());
+      // dd($request->all());
       $post = Post::create([
         'user_id' => auth()->user()->id
       ] + $request->all());

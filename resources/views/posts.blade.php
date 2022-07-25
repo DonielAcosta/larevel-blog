@@ -10,7 +10,7 @@
                     <img src="{{ $post->get_image }}" class="card-img-top">
                 @elseif ($post->iframe)
                     <div class="embed-responsive embed-responsive-16by9">
-                    {!! $post->iframe !!}
+                    {!!$post->iframe!!}
                     </div>                        
                 @endif
                 <div class="card-body">                    
